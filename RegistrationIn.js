@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     $('.button').click(function(e){
         $.ajax({
             type: "POST",
-        url: "https://localhost:7243/api/Authentication/registration",
+        url: "https://localhost:7243/api/authentication/registration",
         mode: 'cors',
         cache: 'no-cache',
         data: JSON.stringify({
@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
           },
           success: function(data) {
               window.open("Categories.html");
-              alert(success());
               }
         });
     })

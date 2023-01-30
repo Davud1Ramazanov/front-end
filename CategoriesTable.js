@@ -1,5 +1,9 @@
+function getToken (){
+    return $.session.get("Accsess token", "key");
+}
 document.addEventListener('DOMContentLoaded', (e)=>{
     $('#btn').click(function(e){
+        console.log(sessionStorage.getItem("Accsess token"));
         $.ajax({
             async: true,
             type: "GET",
@@ -11,10 +15,6 @@ document.addEventListener('DOMContentLoaded', (e)=>{
             },
             success: function (data)
             {
-                const jwt = require('jsontoken');
-                jwt.verify(token, 'secret', (err,decoded)=>{
-                if(err) console.log(err);
-               })
                let rows = "";
                $.each(ter, function(index, inf){
                 rows += value;
