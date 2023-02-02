@@ -76,16 +76,10 @@ document.addEventListener('DOMContentLoaded', (e) => {
                     editbutton.setAttribute('id', `${item['id']}`);
                     editbutton.innerText = "Edit";
 
-                    let edit1 = document.createElement('button');
-                    edit1.className = "edit-1";
-                    edit1.innerText = "confirm";
-
                     var modal = document.getElementById("myModal");
                     var span = document.getElementsByClassName("close")[0];
                     editbutton.onclick = function () {
                         modal.style.display = "block"; 
-                        // завтра попробовать обработать данную кнопку вместо изменения #edit-confirm-prod и к нему 
-                        // modal.append(edit1);
                     }
                     span.onclick = function () {
                         modal.style.display = "none";

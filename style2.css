@@ -4,7 +4,11 @@ h1{
   text-align: center;
   font-weight: 500;
 }
-#btn{
+.table-categories{
+  padding-bottom: 100px;
+}
+
+#btn {
   display: inline-block;
   width: 150px;
   height: 35px;
@@ -21,10 +25,29 @@ h1{
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
+
+#add-prod {
+  display: inline-block;
+  width: 150px;
+  height: 35px;
+  border-radius: 15px;
+  margin: 0 auto;
+  display: block;
+}
+#add-prod:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#add-prod:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 50%;
+    width: 60%;
     margin: auto;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
@@ -38,3 +61,209 @@ table {
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+
+.create-product{
+  padding: 15px;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.input {
+  display:block;
+  width:90%;
+  margin:10px 0;
+  padding:10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin: auto;
+  margin-bottom: 1%;
+  text-align: center;
+}
+
+.input:invalid {
+  animation: justshake 0.3s forwards;
+  color: red;
+}
+
+@keyframes justshake {
+  25% {
+    transform: translateX(5px);
+  }
+
+  50% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX-(5px);
+  }
+}
+
+.del-btn {
+  width: fit-content;
+  min-width: 100px;
+  height: 45px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2.5px solid #E0E1E4;
+  box-shadow: 0px 0px 20px -20px;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s ease-in-out 0ms;
+  user-select: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.del-btn:hover {
+  background-color: #F2F2F2;
+  box-shadow: 0px 0px 20px -18px;
+}
+
+.del-btn:active {
+  transform: scale(0.95);
+}
+
+.edit-btn {
+  width: fit-content;
+  min-width: 100px;
+  height: 45px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2.5px solid #E0E1E4;
+  box-shadow: 0px 0px 20px -20px;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s ease-in-out 0ms;
+  user-select: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.edit-btn:hover {
+  background-color: #F2F2F2;
+  box-shadow: 0px 0px 20px -18px;
+}
+
+.edit-btn:active {
+  transform: scale(0.95);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: darkgray;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+#edit-confirm-prod {
+  width: 150px;
+  min-width: 100px;
+  height: 45px;
+  padding: 8px;
+  border-radius: 10px;
+  border: 2.5px solid #E0E1E4;
+  box-shadow: 0px 0px 20px -20px;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s ease-in-out 0ms;
+  user-select: none;
+  font-family: 'Poppins', sans-serif;
+  margin: 0 auto;
+  display: block;
+}
+
+#edit-confirm-prod:hover {
+  background-color: #F2F2F2;
+  box-shadow: 0px 0px 20px -18px;
+}
+
+#edit-confirm-prod:active {
+  transform: scale(0.95);
+}
+
+
+.edit-1 {
+  width: 150px;
+  min-width: 100px;
+  height: 45px;
+  padding: 8px;
+  border-radius: 10px;
+  border: 2.5px solid #E0E1E4;
+  box-shadow: 0px 0px 20px -20px;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s ease-in-out 0ms;
+  user-select: none;
+  font-family: 'Poppins', sans-serif;
+  margin: 0 auto;
+  display: block;
+}
+
+.edit-1:hover {
+  background-color: #F2F2F2;
+  box-shadow: 0px 0px 20px -18px;
+}
+
+.edit-1:active {
+  transform: scale(0.95);
+}

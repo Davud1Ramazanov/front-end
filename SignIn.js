@@ -14,8 +14,8 @@ $(".button").click(function(e){
             'Content-Type': 'application/json'
           },
           success: function(data) {
-              sessionStorage.setItem("Accsess token", data.token);
-              window.open("Categories.html");
+              sessionStorage.setItem("AccsessToken", data.token);
+              window.open("MainMenu.html");
               }
         });
     })

@@ -1,34 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="style2.css">
-    <script src="CategoriesTable.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="style2.css">
+  <script src="CategoriesTable.js"></script>
+  <title>Gadgets</title>
 </head>
+
 <body>
-    <h1>Category</h1>
-    <div class="table-categories">
-        <table id="category">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                </tr>
-                <tr>
-                    <th>ID Category</th>
-                </tr>
-                <tr>
-                    <th>Name</th>
-                </tr>
-                <tr>
-                    <th>Price</th>
-                </tr>
-            </thead>
-        </table>
-        <br><br><button id="btn">Get</button>
+  <div class="table-gadgets">
+    <h1>Gadgets</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Image</th>
+          <th scope="col">ID</th>
+          <th scope="col">ID Category</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Edit</th>
+        </tr>
+      </thead>
+    </table>
+    <br><button id="btn">Get</button>
+  </div>
+
+  <div class="create-product">
+    <h1>Create product</h1>
+    <input id="add-idcategory" type="number" class="input" placeholder="Enter id category" />
+    <input id="add-img" type="text" class="input" placeholder="Enter url image" />
+    <input id="add-name" type="text" class="input" placeholder="Enter name product" />
+    <input id="add-price" type="number" class="input" placeholder="Enter price product" />
+    <br><button id="add-prod">Create</button>
+
+    <div id="myModal" class="modal">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h1>Edit gadgets</h1>
+        </div>
+        <div class="modal-body">
+          <!-- <input id="edit-id" type="number" class="input" placeholder="Enter id" /> -->
+          <input id="edit-idprod" type="number" class="input" placeholder="Enter id category" />
+          <input id="edit-img" type="text" class="input" placeholder="Enter url image" />
+          <input id="edit-prod" type="text" class="input" placeholder="Enter name product" />
+          <input id="edit-priceprod" type="number" class="input" placeholder="Enter price product" />
+          <br><button id="edit-confirm-prod">Create</button>
+        </div>
+      </div>
     </div>
+
 </body>
+
 </html>
