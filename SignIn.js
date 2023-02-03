@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', load =>{
 $(".button").click(function(e){
     $.ajax({
         type: "POST",
-        url: "https://localhost:7243/api/Authentication/login",
+        url: "https://localhost:7093/api/Authenticate/login",
         mode: 'cors',
         cache: 'no-cache',
         data: JSON.stringify({
@@ -15,7 +15,7 @@ $(".button").click(function(e){
           },
           success: function(data) {
               sessionStorage.setItem("AccsessToken", data.token);
-              window.open("MainMenu.html");
+              window.open("Categories.html");
               }
         });
     })

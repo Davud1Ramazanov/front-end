@@ -1,10 +1,11 @@
-h1{
+h1 {
   font-size: 30px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
   font-weight: 500;
 }
-.table-categories{
+
+.table-categories {
   padding-bottom: 100px;
 }
 
@@ -16,6 +17,7 @@ h1{
   margin: 0 auto;
   display: block;
 }
+
 #btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -34,6 +36,7 @@ h1{
   margin: 0 auto;
   display: block;
 }
+
 #add-prod:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -44,25 +47,113 @@ h1{
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 60%;
-    margin: auto;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
+#add-manager {
+  display: inline-block;
+  width: 150px;
+  height: 35px;
+  border-radius: 15px;
+  margin: 0 auto;
+  display: block;
+}
 
-.create-product{
+#add-manager:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#add-manager:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#del-manager {
+  display: inline-block;
+  width: 150px;
+  height: 35px;
+  border-radius: 15px;
+  margin: 0 auto;
+  display: block;
+}
+
+#del-manager:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#del-manager:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#add-gadgetname {
+  display: inline-block;
+  width: 150px;
+  height: 35px;
+  border-radius: 15px;
+  margin: 0 auto;
+  display: block;
+}
+
+#add-gadgetname:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#add-gadgetname:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+  margin: auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.add-managers {
+  padding: 15px;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.del-managers {
+  padding: 15px;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.add-categories {
+  padding: 15px;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.create-product {
   padding: 15px;
   height: 300px;
   width: 300px;
@@ -73,10 +164,10 @@ table {
 }
 
 .input {
-  display:block;
-  width:90%;
-  margin:10px 0;
-  padding:10px;
+  display: block;
+  width: 90%;
+  margin: 10px 0;
+  padding: 10px;
   border-radius: 10px;
   box-sizing: border-box;
   margin: auto;
@@ -159,14 +250,14 @@ table {
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px; 
+  padding-top: 100px;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4); 
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
@@ -176,7 +267,7 @@ table {
   padding: 0;
   border: 1px solid #888;
   width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
@@ -184,13 +275,27 @@ table {
 }
 
 @-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
-  to {top:0; opacity:1}
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
 }
 
 @keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
 }
 
 .close {
@@ -213,7 +318,9 @@ table {
   color: white;
 }
 
-.modal-body {padding: 2px 16px;}
+.modal-body {
+  padding: 2px 16px;
+}
 
 #edit-confirm-prod {
   width: 150px;
@@ -238,32 +345,5 @@ table {
 }
 
 #edit-confirm-prod:active {
-  transform: scale(0.95);
-}
-
-
-.edit-1 {
-  width: 150px;
-  min-width: 100px;
-  height: 45px;
-  padding: 8px;
-  border-radius: 10px;
-  border: 2.5px solid #E0E1E4;
-  box-shadow: 0px 0px 20px -20px;
-  cursor: pointer;
-  background-color: white;
-  transition: all 0.2s ease-in-out 0ms;
-  user-select: none;
-  font-family: 'Poppins', sans-serif;
-  margin: 0 auto;
-  display: block;
-}
-
-.edit-1:hover {
-  background-color: #F2F2F2;
-  box-shadow: 0px 0px 20px -18px;
-}
-
-.edit-1:active {
   transform: scale(0.95);
 }

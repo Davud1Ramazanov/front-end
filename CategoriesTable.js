@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         $.ajax({
             async: true,
             type: "GET",
-            url: 'https://localhost:7243/api/Gadgets/GadgetsList',
+            url: 'https://localhost:7093/api/Gadgets/GadgetsList',
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             headers: {
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
                     deletebutton.addEventListener('click', (e => {
                         $.ajax({
                             type: "POST",
-                            url: `https://localhost:7243/api/Gadgets/DeleteGadget?id=${item['id']}`,
+                            url: `https://localhost:7093/api/Gadgets/DeleteGadget?id=${item['id']}`,
                             dataType: "json",
                             headers: {
                                 'Authorization': 'Bearer ' + getToken()
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
                     var modal = document.getElementById("myModal");
                     var span = document.getElementsByClassName("close")[0];
                     editbutton.onclick = function () {
-                        modal.style.display = "block"; 
+                        modal.style.display = "block";
                     }
                     span.onclick = function () {
                         modal.style.display = "none";
@@ -100,33 +100,91 @@ document.addEventListener('DOMContentLoaded', (e) => {
         })
     })
     $('#edit-confirm-prod').click(function (e) {
-        if ($('input').val() != 0) {
-            $.ajax({
-                type: "POST",
-                url: 'https://localhost:7243/api/Gadgets/EditGadget',
-                data: JSON.stringify({
-                    idCategory: $("#edit-idprod").val(),
-                    name: $("#edit-prod").val(),
-                    price: $("#edit-priceprod").val(),
-                    image: $("#edit-img").val()
-                }),
-                headers: {
-                    'Authorization': 'Bearer ' + getToken(),
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                success: function (response) {
-                    alert('Successful edit!')
-                    location.reload();
-                }
-            });
-        }
+        $.ajax({
+            type: "POST",
+            url: 'https://localhost:7093/api/Gadgets/EditGadget',
+            data: JSON.stringify({
+                idCategory: $("#edit-idprod").val(),
+                name: $("#edit-prod").val(),
+                price: $("#edit-priceprod").val(),
+                image: $("#edit-img").val()
+            }),
+            headers: {
+                'Authorization': 'Bearer ' + getToken(),
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            success: function (response) {
+                alert('Successful edit!')
+                location.reload();
+            }
+        });
     });
+
+    $('#add-manager').click(function (e) {
+        $.ajax({
+            type: "POST",
+            url: 'https://localhost:7093/api/Register/RegManager',
+            data: JSON.stringify({
+                login: $("#add-login").val(),
+                password: $("#add-password").val(),
+                email: $("#add-email").val()
+            }),
+            headers: {
+                'Authorization': 'Bearer ' + getToken(),
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            success: function (response) {
+                alert('Successful added!')
+                location.reload();
+            }
+        });
+    });
+
+    $('#del-manager').click(function (e) {
+        $.ajax({
+            type: "POST",
+            url: 'https://localhost:7093/api/Register/DelManager',
+            data: JSON.stringify({
+                login: $("#del-login").val(),
+            }),
+            headers: {
+                'Authorization': 'Bearer ' + getToken(),
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            success: function (response) {
+                alert('Successful added!')
+                location.reload();
+            }
+        });
+    });
+
+    $('#add-gadgetname').click(function (e) {
+        $.ajax({
+            type: "POST",
+            url: 'https://localhost:7093/api/Categories/CategoryCreate',
+            data: JSON.stringify({
+                nameGadget: $("#add-namegadget").val(),
+            }),
+            headers: {
+                'Authorization': 'Bearer ' + getToken(),
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            success: function (response) {
+                alert('Successful added!')
+                location.reload();
+            }
+        });
+    });
+
 
     $('#add-prod').click(function (e) {
         $.ajax({
             type: "POST",
-            url: "https://localhost:7243/api/Gadgets/CreateGadget",
+            url: 'https://localhost:7093/api/Gadgets/CreateGadget',
             data: JSON.stringify({
                 idCategory: $("#add-idcategory").val(),
                 name: $("#add-name").val(),

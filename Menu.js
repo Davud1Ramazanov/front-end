@@ -4,7 +4,7 @@ function getToken() {
 document.addEventListener('DOMContentLoaded', (e) => {
     $.ajax({
         type: "GET",
-        url: "https://localhost:7243/api/Gadgets/GadgetsList",
+        url: `https://localhost:7243/api/Gadgets/GadgetsList by IdCategory?id=${item['id']}`,
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         headers: {
@@ -38,6 +38,15 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 buybutton.className = "buy-button";
                 buybutton.setAttribute('id', `${item['id']}`);
                 buybutton.innerText = "Buy";
+
+                buybutton.addEventListener('click', (e)=>{
+                    if(getToken()==null){
+                        alert('You need gadget!');
+                    }
+                    else{
+                        alert('You bought gadget!');
+                    }
+                });
                 card.append(buybutton);
 
                 $('.container').append(card);
