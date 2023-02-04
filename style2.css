@@ -28,6 +28,25 @@ h1 {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+#find {
+  display: inline-block;
+  width: 150px;
+  height: 35px;
+  border-radius: 15px;
+  margin: 0 auto;
+  display: block;
+}
+
+#find:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#find:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
 #add-prod {
   display: inline-block;
   width: 150px;
@@ -123,44 +142,20 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-.add-managers {
-  padding: 15px;
-  height: 300px;
-  width: 300px;
-  margin: auto;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  margin-top: 30px;
+#for-crud{
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.del-managers {
+.container {
   padding: 15px;
-  height: 300px;
-  width: 300px;
+  height: 350px;
+  width: 250px;
   margin: auto;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   margin-top: 30px;
-}
-
-.add-categories {
-  padding: 15px;
-  height: 300px;
-  width: 300px;
-  margin: auto;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  margin-top: 30px;
-}
-
-.create-product {
-  padding: 15px;
-  height: 300px;
-  width: 300px;
-  margin: auto;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  margin-top: 30px;
+  
 }
 
 .input {
@@ -196,6 +191,30 @@ tr:nth-child(even) {
   100% {
     transform: translateX-(5px);
   }
+}
+
+.del-btn-category {
+  width: fit-content;
+  min-width: 100px;
+  height: 45px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2.5px solid #E0E1E4;
+  box-shadow: 0px 0px 20px -20px;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s ease-in-out 0ms;
+  user-select: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.del-btn-category:hover {
+  background-color: #F2F2F2;
+  box-shadow: 0px 0px 20px -18px;
+}
+
+.del-btn-categoryactive {
+  transform: scale(0.95);
 }
 
 .del-btn {

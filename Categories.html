@@ -13,6 +13,19 @@
 
 <body>
   <div class="table-gadgets">
+    <h1>Category</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Category</th>
+        </tr>
+      </thead>
+    </table>
+    <br><button id="find">Get</button>
+  </div>
+
+  <div class="table-gadgets">
     <h1>Gadgets</h1>
     <table class="table">
       <thead>
@@ -29,52 +42,54 @@
     <br><button id="btn">Get</button>
   </div>
 
-  <div class="add-managers">
-    <h1>Create Manager</h1>
-    <input id="add-login" type="number" class="input" placeholder="Enter login" />
-    <input id="add-password" type="number" class="input" placeholder="Enter password" />
-    <input id="add-email" type="number" class="input" placeholder="Enter email" />
-    <br><button id="add-manager">Create</button>
+  <div id="for-crud">
+    <div class="container">
+      <h1>Create Manager</h1>
+      <input id="add-login" type="number" class="input" placeholder="Enter login" />
+      <input id="add-password" type="number" class="input" placeholder="Enter password" />
+      <input id="add-email" type="number" class="input" placeholder="Enter email" />
+      <br><button id="add-manager">Create</button>
+    </div>
+
+    <div class="container">
+      <h1>Delete Manager</h1>
+      <input id="del-login" type="text" class="input" placeholder="Enter login" />
+      <br><button id="del-manager">Delete</button>
+    </div>
+
+    <div class="container">
+      <h1>Create categories</h1>
+      <input id="add-namegadget" type="number" class="input" placeholder="Enter name gadget" />
+      <br><button id="add-gadgetname">Create</button>
+    </div>
+
+    <div class="container">
+      <h1>Create product</h1>
+      <input id="add-idcategory" type="number" class="input" placeholder="Enter id category" />
+      <input id="add-img" type="text" class="input" placeholder="Enter url image" />
+      <input id="add-name" type="text" class="input" placeholder="Enter name product" />
+      <input id="add-price" type="number" class="input" placeholder="Enter price product" />
+      <br><button id="add-prod">Create</button>
+    </div>
   </div>
 
-  <div class="del-managers">
-    <h1>Delete Manager</h1>
-    <input id="del-login" type="text" class="input" placeholder="Enter login" />
-    <br><button id="del-manager">Delete</button>
-  </div>
+  <div id="myModal" class="modal">
 
-  <div class="add-categories">
-    <h1>Create categories</h1>
-    <input id="add-namegadget" type="number" class="input" placeholder="Enter name gadget" />
-    <br><button id="add-gadgetname">Create</button>
-  </div>
-
-  <div class="create-product">
-    <h1>Create product</h1>
-    <input id="add-idcategory" type="number" class="input" placeholder="Enter id category" />
-    <input id="add-img" type="text" class="input" placeholder="Enter url image" />
-    <input id="add-name" type="text" class="input" placeholder="Enter name product" />
-    <input id="add-price" type="number" class="input" placeholder="Enter price product" />
-    <br><button id="add-prod">Create</button>
-  </div>
-
-      <div id="myModal" class="modal">
-
-        <div class="modal-content">
-          <div class="modal-header">
-            <span class="close">&times;</span>
-            <h1>Edit gadgets</h1>
-          </div>
-          <div class="modal-body">
-            <input id="edit-id" type="number" class="input" placeholder="Enter id" />
-            <input id="edit-idprod" type="number" class="input" placeholder="Enter id category" />
-            <input id="edit-img" type="text" class="input" placeholder="Enter url image" />
-            <input id="edit-prod" type="text" class="input" placeholder="Enter name product" />
-            <input id="edit-priceprod" type="number" class="input" placeholder="Enter price product" />
-            <br><button id="edit-confirm-prod">Create</button>
-          </div>
-        </div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h1>Edit gadgets</h1>
       </div>
+      <div class="modal-body">
+        <input id="edit-id" type="number" class="input" placeholder="Enter id" />
+        <input id="edit-idprod" type="number" class="input" placeholder="Enter id category" />
+        <input id="edit-img" type="text" class="input" placeholder="Enter url image" />
+        <input id="edit-prod" type="text" class="input" placeholder="Enter name product" />
+        <input id="edit-priceprod" type="number" class="input" placeholder="Enter price product" />
+        <br><button id="edit-confirm-prod">Create</button>
+      </div>
+    </div>
+  </div>
 
 </body>
 

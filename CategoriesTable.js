@@ -3,6 +3,61 @@ function getToken() {
 }
 document.addEventListener('DOMContentLoaded', (e) => {
 
+    $('#find').click(function (e) {
+        $.ajax({
+            async: true,
+            type: "GET",
+            url: 'https://localhost:7093/api/Categories/CategoryList',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            headers: {
+                'Authorization': 'Bearer ' + getToken()
+            },
+            success: function (response) {
+                console.log(response);
+                for (const item of response) {
+                    let tbody = document.createElement('tbody');
+                    tbody.className = "tbody";
+
+                    let tr = document.createElement('tr');
+                    tr.setAttribute('id', `${item['id']}`)
+
+                    let id = document.createElement('td');
+                    id.innerText = `${item['id']}`;
+                    id.setAttribute('id', `${item['id']}`);
+                    tr.append(id);
+
+                    let namecategory = document.createElement('td');
+                    namecategory.innerText = `${item['nameGadgets']}`;
+                    namecategory.setAttribute('nameGadgets', `${item['nameGadgets']}`);
+                    tr.append(namecategory);
+
+                    let deletecategory = document.createElement('button');
+                    deletecategory.className = "del-btn-category";
+                    deletecategory.setAttribute('id', `${item['id']}`);
+                    deletecategory.innerText = "Delete";
+
+                    deletecategory.addEventListener('click', (e => {
+                        $.ajax({
+                            type: "POST",
+                            url: `https://localhost:7093/api/Categories/DeleteCategory?id=${item['id']}`,
+                            dataType: "json",
+                            headers: {
+                                'Authorization': 'Bearer ' + getToken()
+                            },
+                            success: function (response) {
+                                alert('Successful delete!')
+                                location.reload();
+                            }
+                        });
+                    }))
+                    tr.append(deletecategory);
+                }
+            }
+        })
+    })
+
+
     $('#btn').click(function (e) {
         $.ajax({
             async: true,
